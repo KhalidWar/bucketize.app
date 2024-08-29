@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{appname}}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://{{domain}}/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{appname}}">
+    <meta property="og:description" content="{{tagline}}">
+    <meta property="og:image" content="https://{{domain}}/social-card.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="{{domain}}" />
+    <meta property=" twitter:url" content="https://{{domain}}" />
+    <meta name=" twitter:title" content="{{appname}}" />
+    <meta name=" twitter:description" content="{{tagline}}" />
+    <meta name="twitter:image" content="https://{{domain}}/social-card.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family={{google-font-family}}:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blue1: #dcf4ff;
+            --blue2: #A9E2FC;
+            --blue3: #01AFE5;
+            --blue4: #0072AF;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: stretch;
+            min-height: 100vh;
+            width: 100vw;
+            gap: 48px;
+            font-family: {{google-font-family}}, sans-serif;
+            color: var(--blue3);
+            padding: 48px 0px;
+        }
+
+        .screenshot-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .screenshot-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 16px;
+            gap: 16px;
+        }
+
+        @media screen and (max-width: 550px) {
+            .screenshot-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media screen and (min-width: 551px) and (max-width: 900px) {
+            .screenshot-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .screenshot {
+            height: 400px;
+            border-radius: 24px;
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.05);
+            border: var(--blue1) solid 4px;
+        }
+
+        a {
+            color: var(--blue3);
+            text-decoration: none;
+        }
+
+        .link-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            font-size: 18px;
+        }
+
+        .copyright-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="screenshot-wrapper">
+        <div class="screenshot-container">
+            <img class="screenshot" src="./assets/ss-a1.png" />
+            <img class="screenshot" src="./assets/ss-a2.png" />
+            <img class="screenshot" src="./assets/ss-a3.png" />
+            <img class="screenshot" src="./assets/ss-a4.png" />
+        </div>
+    </div>
+    <div class="link-container">
+        <a href="/privacy">🔒 Privacy</a>
+        <a href="/terms">📄 Terms</a>
+        <a href="mailto:{{email}}">👋 Contact</a>
+    </div>
+    <div class="copyright-container">
+        <a href="https://twitter.com/luke_pighetti">©2024 Luke Pighetti</a>
+    </div>
+</body>
+
+</html>
